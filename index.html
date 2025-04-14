@@ -7,17 +7,20 @@
     <style>
         .heading{
             text-align: center;
+            margin-top: 50px;
+            color: brown;
         }
         .container{
-            width: 400px;
-            background-color: antiquewhite;
+            width: 300px;
+            background-color: rgb(207, 194, 194);
             border: 1px solid black;
+            border-radius: 10px;
             display: block;
-            margin: 10px auto;
-            padding: 20px;
+            margin: 40px auto;
+            padding: 30px;
         }
         .mood-happy{
-            height: 250px;
+            height: 200px;
             display: block;
             margin: 20px auto;
         }
@@ -27,9 +30,10 @@
         }
         .btn{
             font-size: 20px;
-            padding: 3px 20px;
+            padding: 5px 20px;
             border-radius: 20px;
             border: none;
+            margin-top: 20px;
         }
         .btn-happy{
             background-color: #FFD700;
@@ -46,12 +50,27 @@
 <body>
     <h1 class="heading">Mood Swicher</h1>
     <div class="container">
-        <img src="happy.png" alt="happy mood" id="happy" class="mood-happy">
+        <img src="happy.png" alt="happy mood" id="emojie" class="mood-happy">
         <div class="btn-group">
-        <button type="button" class="btn btn-happy">Happy</button>
-        <button type="button" class="btn btn-sad">Sad</button>
-        <button type="button" class="btn btn-angry">Angry</button>
+        <button type="button" class="btn btn-happy" onclick="happy()">Happy</button>
+        <button type="button" class="btn btn-sad" onclick="sad()">Sad</button>
+        <button type="button" class="btn btn-angry" onclick="angry()">Angry</button>
         </div>
     </div>
+
+    <script>
+        const emojieElement=document.getElementById("emojie");
+        function happy(){
+            emojieElement.src="happy.png";
+        }
+
+        function sad(){
+            emojieElement.src="sad.png";
+        }
+
+        function angry(){
+            emojieElement.src="angry.png";
+        }
+    </script>
 </body>
 </html>
